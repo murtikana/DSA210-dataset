@@ -1,6 +1,7 @@
 **Steam Game Recommendation and EDA Project**
 
 **Motivation**
+
 This project aims to build a game recommendation system and perform an exploratory data analysis (EDA) on user recommendations from the Steam Store. I am interested in understanding user behavior and identifying the key factors that influence game recommendations.
 
 **Data Source**
