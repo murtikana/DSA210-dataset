@@ -10,7 +10,7 @@ games.csv: Contains game information such as ratings, pricing, and release dates
 users.csv: Contains public user profile information.
 recommendations.csv: Contains user reviews indicating whether a game is recommended.
 
-[Dataset Link]([https://ornek.com](https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam/data))
+[Dataset Link](https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam/data)
 
 Data Analysis The project will involve:
 
