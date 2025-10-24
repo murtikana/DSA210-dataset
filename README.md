@@ -25,7 +25,7 @@ Machine Learning Techniques: Developing and evaluating a recommendation model ba
 
 Expected findings include:
 
-Identification of significant factors that drive user recommendations.
+Identification of significant factors that drive user recommendations
 Insights into trends in game ratings, pricing, and user engagement.
 Clustering of similar games based on analyzed features.
 
