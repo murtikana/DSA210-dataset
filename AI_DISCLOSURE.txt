@@ -1,0 +1,2 @@
+This project used ChatGPT (GPT-5) for language refinement and documentation clarity.
+All code, analysis, and interpretations were written and verified independently by Muratcan Gülcan.
