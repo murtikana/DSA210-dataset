@@ -1,34 +1,99 @@
-**Steam Game Recommendation and EDA Project**
+# Steam Game Recommendation and Exploratory Data Analysis
 
-**Motivation**
+**Author:** Muratcan Gülcan  
+**Course:** DSA210 - Introduction to Data Science  
+**Term:** 2025–2026 Fall  
 
-This project aims to build a game recommendation system and perform an exploratory data analysis (EDA) on user recommendations from the Steam Store. I am interested in understanding user behavior and identifying the key factors that influence game recommendations.
+---
 
-**Data Source**
+## Project Overview
 
-The dataset used is "Game Recommendations on Steam" from Kaggle. It contains over 41 million cleaned and preprocessed user recommendations, along with detailed information about games and add-ons. The dataset comprises three main files:
+This project analyzes Steam user reviews to understand what factors influence whether a game is recommended or not.  
+It combines **exploratory data analysis (EDA)** and a **machine learning model** to identify patterns in playtime, pricing, ratings, and platform availability.
 
-games.csv: Contains game information such as ratings, pricing, and release dates.
-users.csv: Contains public user profile information.
-recommendations.csv: Contains user reviews indicating whether a game is recommended.
+---
+
+## Motivation
+
+Steam is the largest gaming platform with millions of user reviews.  
+By analyzing these reviews, we can discover what drives players to recommend games — helping developers improve pricing, design, and platform strategies.
+
+---
+
+## Data Source
 
 [Dataset Link](https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam/data)
 
-**Data Analysis**
+Files used:
+- **games.csv:** Game metadata (ratings, prices, release years)
+- **users.csv:** Public user info
+- **recommendations.csv:** User reviews (recommended / not recommended)
 
-The project will involve:
+---
 
-Exploratory Data Analysis (EDA): Examining distributions of ratings, pricing, and user activity, and visualizing key trends.
-Machine Learning Techniques: Developing and evaluating a recommendation model based on user preferences and game features.
+## Methods
 
-**Findings**
+1. **Preprocessing**
+   - Merged three datasets
+   - Created new features: `age_at_review`, `platforms`, and `reviews_bin`
+   - Cleaned missing or invalid values
 
-Expected findings include:
+2. **Exploratory Data Analysis**
+   - Visualized distributions of playtime, price, and ratings  
+   - Examined correlations and trends over time  
+   - Found patterns by platform and rating category  
 
-Identification of significant factors that drive user recommendations
-Insights into trends in game ratings, pricing, and user engagement.
-Clustering of similar games based on analyzed features.
+3. **Machine Learning**
+   - Random Forest Classifier predicting `is_recommended`
+   - Features: playtime, price, positive ratio, user reviews, release age, platforms  
+   - Accuracy: **~85%**, precision and recall above 0.88
 
-**Limitations and Future Work**
-Limitations: Since the dataset is already preprocessed, certain nuances of the raw data might be lost.
-Future Work: Enhancing the recommendation model, integrating additional data sources, and exploring advanced ML techniques for further improvements.
+---
+
+## Key Findings
+
+- Most reviews (≈87%) are positive.  
+- “Very Positive” and “Positive” games dominate Steam’s catalog.  
+- Multi-platform games reach up to **94%** recommendation rates.  
+- Higher playtime strongly correlates with positive reviews.  
+- Recommendation rates slightly declined from 2011–2021, peaking during Steam sales.
+
+---
+
+## Limitations & Future Work
+
+- Dataset was pre-cleaned, limiting access to raw data patterns.  
+- Only numeric features were used — no review text analysis yet.  
+- Future work: add **sentiment analysis**, **genre-based modeling**, and **price inflation adjustments**.
+
+---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/steam-recommendation.git
+   cd steam-recommendation
+
+pip install -r requirements.txt
+jupyter notebook gamerecommendation.ipynb
+
+Requirements
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+
+AI Assistance Disclosure
+
+Some text formatting and documentation improvements were supported by ChatGPT (GPT-5).
+All code, analysis, and interpretations were independently written and verified by Muratcan Gülcan.
+
+Citation
+
+Kozyriev, Anton. Game Recommendations on Steam. Kaggle, 2022.
+Sabancı University, DSA210 – Introduction to Data Science, Fall 2025–2026 Project Guidelines.
+
+
+
