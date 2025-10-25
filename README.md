@@ -19,7 +19,7 @@ By analyzing these reviews, we can discover what drives players to recommend gam
 ---
 
 ## Data Source
-[Dataset Link](https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam/data)
+[Dataset Link](https://www.kaggle.com/datasets/antonkozyriev/game-recommendations-on-steam)
 
 Files used:  
 - **games.csv:** Game metadata (ratings, prices, release years)  
